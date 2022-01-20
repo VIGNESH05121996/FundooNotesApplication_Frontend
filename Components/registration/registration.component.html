@@ -1,0 +1,71 @@
+<div class="Registration_container">
+
+  <div class="fundoo-container">
+    <div class="left_container">
+        <h1>
+          <span class="c1">F</span>
+          <span class="c2">u</span>
+          <span class="c3">n</span>
+          <span class="c4">d</span>
+          <span class="c5">o</span>
+          <span class="c6">o</span>
+        </h1>
+        <h2>Create Your Fundoo Account</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="name-container">
+          
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" formControlName="firstName">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" formControlName="lastName">
+          </mat-form-field>
+        </div>
+
+        <div class="email-container">
+          <mat-form-field class="email_input" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+
+        </div>
+        <span class="email_p1">
+          <p>You can use letters,numbers & periods</p>
+        </span>
+        <span class="email_p2">
+          <p>Use my current email address instead</p>
+        </span>
+
+        <div class="password-container">
+
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>Confirm</mat-label>
+            <input matInput placeholder="Confirm" formControlName="confirmPassword">
+          </mat-form-field>
+        </div>
+
+        <div class="Login_Left_footer">
+          <span class="email_p2">
+            <p>Sign in instead</p>
+          </span>
+          <button mat-raised-button color="primary">Next</button>
+        </div>
+      </form>
+    </div>
+    <div class="right_contianer">
+      <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" width="250">
+      <h3>One account. All of Google<br /> working for you.</h3>
+
+    </div>
+
+  </div>
+
+</div>

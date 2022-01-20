@@ -1,0 +1,44 @@
+<div class = "login-container">
+    <h1>
+        <span class="c1">F</span>
+        <span class="c2">u</span>
+        <span class="c3">n</span>
+        <span class="c4">d</span>
+        <span class="c5">o</span>
+        <span class="c6">o</span>
+    </h1>
+  
+    <h2>Sign in</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class ="input-container">
+      <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email" formControlName="email">
+      </mat-form-field>
+  
+      <div class = "forgetEmail">
+        <button class="button">Forgot Email?</button>
+      </div>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="password" formControlName="password">
+       </mat-form-field>
+    </div>
+
+    <div class = "text">
+      <p>Not your computer? Use Guest mode to sign in privately.</p>
+    </div>
+
+    <div class="learnMore">
+      <button class="button">Learn More</button>
+    </div>
+  
+    <div class="createAccount"><button class="button">Create Account</button>
+    </div>
+  
+    <div class = "next">
+      <button mat-raised-button >Next</button>
+    </div>
+  </form>
+  </div>
