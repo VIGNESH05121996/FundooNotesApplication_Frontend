@@ -2,18 +2,18 @@
 
   <div class="fundoo-container">
     <div class="left_container">
-        <h1>
-          <span class="c1">F</span>
-          <span class="c2">u</span>
-          <span class="c3">n</span>
-          <span class="c4">d</span>
-          <span class="c5">o</span>
-          <span class="c6">o</span>
-        </h1>
-        <h2>Create Your Fundoo Account</h2>
-        <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <h1>
+        <span class="c1">F</span>
+        <span class="c2">u</span>
+        <span class="c3">n</span>
+        <span class="c4">d</span>
+        <span class="c5">o</span>
+        <span class="c6">o</span>
+      </h1>
+      <h2>Create Your Fundoo Account</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
         <div class="name-container">
-          
+
           <mat-form-field appearance="outline" class="name_input">
             <mat-label>First Name</mat-label>
             <input matInput placeholder="First Name" formControlName="firstName">
@@ -55,7 +55,7 @@
         <div class="Login_Left_footer">
           <span class="email_p2">
             <div routerLink='/login'>
-            <p>Sign in instead</p>
+              <p>Sign in instead</p>
             </div>
           </span>
           <button mat-raised-button color="primary">Next</button>
