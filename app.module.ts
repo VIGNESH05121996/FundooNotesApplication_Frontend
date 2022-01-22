@@ -11,6 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,7 +27,7 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule
+    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
