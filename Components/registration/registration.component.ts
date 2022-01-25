@@ -27,14 +27,22 @@ registered()
   if(this.registerForm.value)
   {
     console.log(this.registerForm.value);
+<<<<<<< HEAD
     let requestData={
+=======
+    let register={
+>>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
       firstName:this.registerForm.value.firstName,
       lastName:this.registerForm.value.lastName,
       email:this.registerForm.value.email,
       password:this.registerForm.value.password,
       confirmPassword:this.registerForm.value.confirmPassword
     }
+<<<<<<< HEAD
     this.userServices.registration(requestData).subscribe((response:any)=>{console.log(response)})
+=======
+    this.userServices.registration(register).subscribe((response:any)=>{console.log(response)})
+>>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
   }
   else
   console.log("invalid");

@@ -12,8 +12,12 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+=======
+
+>>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+<<<<<<< HEAD
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule
+=======
+    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule
+>>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
