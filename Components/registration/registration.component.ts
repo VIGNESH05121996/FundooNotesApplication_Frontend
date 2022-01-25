@@ -27,14 +27,14 @@ registered()
   if(this.registerForm.value)
   {
     console.log(this.registerForm.value);
-    let register={
+    let requestData={
       firstName:this.registerForm.value.firstName,
       lastName:this.registerForm.value.lastName,
       email:this.registerForm.value.email,
       password:this.registerForm.value.password,
       confirmPassword:this.registerForm.value.confirmPassword
     }
-    this.userServices.registration(register).subscribe((response:any)=>{console.log(response)})
+    this.userServices.registration(requestData).subscribe((response:any)=>{console.log(response)})
   }
   else
   console.log("invalid");

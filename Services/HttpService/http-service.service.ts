@@ -11,4 +11,8 @@ private BackendBaseUrl="https://localhost:44365/api";
   {
     return this.httpClient.post(this.BackendBaseUrl+url,data,token && httpOptions);
   }
+  putRequest(url:any,data:any,token:boolean=true,httpOptions:any)
+  {
+    return this.httpClient.put(this.BackendBaseUrl+url,data,token && httpOptions);
+  }
 }
