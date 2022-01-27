@@ -12,13 +12,13 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-=======
-
->>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
-
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,16 +27,15 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     LoginComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
-    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule
-=======
-    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule
->>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
+    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,
+    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

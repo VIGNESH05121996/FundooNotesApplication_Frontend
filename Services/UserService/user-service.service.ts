@@ -1,22 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpServiceService } from '../HttpService/http-service.service';
-<<<<<<< HEAD
 import { ActivatedRoute } from '@angular/router';
-import { Token } from '@angular/compiler';
-=======
->>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
-
-<<<<<<< HEAD
   constructor(private httpService:HttpServiceService,private activatedRoute:ActivatedRoute) { }
-=======
-  constructor(private httpService:HttpServiceService) { }
->>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
   registration(data:any)
   {
     let header={
@@ -37,7 +28,6 @@ export class UserServiceService {
     }
     return this.httpService.postRequest('/User/login',data,false,header);
   }
-<<<<<<< HEAD
   forgetPassword(data:any)
   {
     let header={
@@ -59,6 +49,4 @@ export class UserServiceService {
     }
     return this.httpService.putRequest('/User/ResetPassword',data,true,header);
   }
-=======
->>>>>>> 9398baa6e7aa57bf9c7d2cc3a1db58fe72216037
 }
