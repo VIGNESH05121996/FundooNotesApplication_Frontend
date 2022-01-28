@@ -52,3 +52,18 @@ mat-sidenav{
   #sidenav-icon {
     margin-right: 40px;
   }
+  mat-sidenav-container{
+    height: 88vh;
+    background: #fff;
+  }
+  .menu-button{
+    color: grey;
+    flex-direction: column;
+  }
+  mat-sidenav{
+    width: 240px;
+    background-color: transparent;
+  }
+  .image-container{
+    width: 45;
+  }

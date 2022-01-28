@@ -21,7 +21,7 @@ export class RegistrationComponent implements OnInit {
       confirmPassword: ['', Validators.required]
     });
   }
-registered()
+  onSubmitted()
 {
   this.submitted=true;
   if(this.registerForm.value)

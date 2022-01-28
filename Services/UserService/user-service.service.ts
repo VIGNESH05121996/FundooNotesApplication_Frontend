@@ -49,4 +49,5 @@ export class UserServiceService {
     }
     return this.httpService.putRequest('/User/ResetPassword',data,true,header);
   }
+  
 }

@@ -19,6 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
     ForgetPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
+    CreateNoteComponent
   ],
   imports: [
     BrowserModule,

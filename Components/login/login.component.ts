@@ -18,17 +18,19 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
-  logged()
+  onSubmitted()
   {
     this.submitted=true;
     if(this.loginForm.value)
     {
       console.log(this.loginForm.value);
-      let login={
+      let requestedData={
         email:this.loginForm.value.email,
         password:this.loginForm.value.password
       }
-      this.userService.logging(login).subscribe((response:any)=>{console.log(response)})
+      this.userService.logging(requestedData).subscribe((response:any)=>{
+        localStorage.setItem('token',response.jwtToken)
+        console.log(response)})
     }
     else
     console.log("invalid");

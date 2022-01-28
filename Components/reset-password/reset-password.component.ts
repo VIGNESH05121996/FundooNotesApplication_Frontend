@@ -23,18 +23,18 @@ export class ResetPasswordComponent implements OnInit {
     this.token=this.activatedRoute.snapshot.paramMap.get('token');
   }
 
-  resetted()
+  onSubmitted()
   {
     this.submitted=true;
     if(this.resetPasswordForm.value)
     {
       console.log(this.resetPasswordForm.value,this.token);
-      let reset={
+      let requestedData={
         newPassword:this.resetPasswordForm.value.password,
         confirmPassword:this.resetPasswordForm.value.confirmPassword,
 
       }
-      this.userService.resetPassword(reset,this.token).subscribe((response:any)=>{console.log(response)})
+      this.userService.resetPassword(requestedData,this.token).subscribe((response:any)=>{console.log(response)})
     }
     else
     console.log("invalid");

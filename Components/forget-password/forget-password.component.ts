@@ -17,16 +17,16 @@ export class ForgetPasswordComponent implements OnInit {
       email: ['', Validators.required]
     });
   }
-  forgotten()
+  onSubmitted()
   {
     this.submitted=true;
     if(this.forgetPasswordForm.value)
     {
       console.log(this.forgetPasswordForm.value);
-      let forgetEmail={
+      let requestedData={
         email:this.forgetPasswordForm.value.email
       }
-      this.userService.forgetPassword(forgetEmail).subscribe((response:any)=>{console.log(response)})
+      this.userService.forgetPassword(requestedData).subscribe((response:any)=>{console.log(response)})
     } 
     else
     console.log("invalid");
