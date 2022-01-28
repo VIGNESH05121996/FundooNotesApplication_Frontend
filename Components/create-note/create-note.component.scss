@@ -25,16 +25,6 @@ form{
     resize: none;
   }
 
-  .border {
-    border: 5px solid transparent;
-    height: 20px;
-    width: 50%;
-    top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent
-  }
   button{
       margin: 14px;
   }
@@ -65,5 +55,15 @@ form{
   }
 
   .close{
-    margin: 150px;
+    margin: 100px;
+  }
+  .border {
+    border: 5px solid transparent;
+    height: 20px;
+    width: 50%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent
   }

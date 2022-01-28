@@ -7,22 +7,9 @@
         <p>
             <textarea name="content" placeholder="Take a note" formControlName="takeNote"></textarea>
         </p>
+        
         <div class="border">
-            <button mat-icon-button>
-                <mat-icon>notifications_paused</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>person_add</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>color_lens</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>crop_original</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>archive</mat-icon>
-            </button>
+            <app-icons-component></app-icons-component>
             <button mat-stroked-button class="close" (click)="cardSwap()" (click)="onSubmitted()">
                 Close
             </button>

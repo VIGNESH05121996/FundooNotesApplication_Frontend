@@ -20,6 +20,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { IconsComponentComponent } from './Components/icons-component/icons-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
     ForgetPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
-    CreateNoteComponent
+    CreateNoteComponent,
+    IconsComponentComponent
   ],
   imports: [
     BrowserModule,
