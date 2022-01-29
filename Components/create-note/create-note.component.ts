@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-note',
@@ -12,7 +13,7 @@ export class CreateNoteComponent implements OnInit {
   createNoteForm:FormGroup;
   submitted=false;
   token:any;
-  constructor(private formBuilder: FormBuilder,private notesService:NotesServicesService) { }
+  constructor(private formBuilder: FormBuilder,private notesService:NotesServicesService,private route:Router) { }
 
   ngOnInit(): void {
     this.createNoteForm = this.formBuilder.group({

@@ -21,6 +21,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
 import { IconsComponentComponent } from './Components/icons-component/icons-component.component';
+import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { IconsComponentComponent } from './Components/icons-component/icons-comp
     ResetPasswordComponent,
     DashboardComponent,
     CreateNoteComponent,
-    IconsComponentComponent
+    IconsComponentComponent,
+    GetAllNotesComponent,
+    DisplayNotesComponent,
   ],
   imports: [
     BrowserModule,

@@ -48,9 +48,11 @@ mat-sidenav{
   #sidenav-button {
     display: inline-flex;
     justify-content: space-between;
+    
   }
   #sidenav-icon {
     margin-right: 40px;
+    opacity: 0.6;
   }
   mat-sidenav-container{
     height: 88vh;
@@ -66,4 +68,16 @@ mat-sidenav{
   }
   .image-container{
     width: 45;
+  }
+  .three-icons1{
+    padding-left: 200px;
+    opacity: 0.6;
+  }
+  .three-icons2{
+    padding-left: 30px;
+    opacity: 0.6;
+  }
+  .three-icons3{
+    padding-left: 30px;
+    opacity: 0.6;
   }

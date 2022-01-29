@@ -5,7 +5,7 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
-import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -14,8 +14,8 @@ const routes: Routes = [
   {path:'resetPassword/:token',component:ResetPasswordComponent},
   {path:'dashboard',component:DashboardComponent,
   children:[
-    {path:'', redirectTo:"/dashboard", pathMatch:'full' },
-    {path:'createNote', component:CreateNoteComponent},
+    {path:'', redirectTo:"/dashboard/notes", pathMatch:'full' },
+    {path:'notes', component:GetAllNotesComponent},
   ]}
 ];
 

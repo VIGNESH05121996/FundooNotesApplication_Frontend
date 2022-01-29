@@ -1,0 +1,7 @@
+<div class="displayNotes">
+    <div *ngFor="let response of note.notes" class="getAllNotes">
+        <h2 class="heading">{{response.title}}</h2>
+        <p>{{response.message}}</p>
+        <app-icons-component></app-icons-component>
+    </div>
+</div>

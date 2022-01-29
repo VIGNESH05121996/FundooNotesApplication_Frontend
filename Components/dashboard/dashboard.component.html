@@ -14,18 +14,19 @@
                 <input matInput placeholder="Search">
             </mat-form-field>
         </div>
+        <mat-icon class="three-icons1">refresh</mat-icon>
+        <mat-icon class="three-icons2">view_stream</mat-icon>
+        <mat-icon class="three-icons3">settings</mat-icon>
     </mat-toolbar>
     <mat-sidenav-container>
         <mat-sidenav #sidenav mode="side" [opened]="true">
             <div class="menu-container">
                 <mat-nav-list>
                     <div mat-button id="sidenav-button">
-                        <div routerLink="createNote">
-                            <button mat-button id="sidenav-button">
-                                <mat-icon id="sidenav-icon">lightbulb</mat-icon>
-                                Notes
-                            </button>
-                        </div>
+                        <button mat-button id="sidenav-button">
+                            <mat-icon id="sidenav-icon" (click)="notes()">lightbulb</mat-icon>
+                            Notes
+                        </button>
                     </div>
                     <div>
                         <button mat-button id="sidenav-button">
@@ -60,6 +61,7 @@
             </router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>
-
 </div>
-<app-create-note></app-create-note>
+
+
+

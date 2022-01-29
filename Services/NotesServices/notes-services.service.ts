@@ -19,6 +19,17 @@ export class NotesServicesService {
     }
     return this.httpService.postRequest('/Notes',data,true,header);
   }
+  getAllNotes(token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+        
+      })
+    }
+    return this.httpService.getRequest('/Notes',true,header);
+  }
 }
 
 
