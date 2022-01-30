@@ -1,7 +1,7 @@
 <div class="dashboard-container">
     <mat-toolbar>
         <button mat-icon-button>
-            <mat-icon (click)="sidenav.toggle();" class="menu-button">menu</mat-icon>
+            <mat-icon (click)="onToolbarMenuToggle()" class="menu-button">menu</mat-icon>
         </button>
 
         <div class="image-container">
@@ -19,7 +19,7 @@
         <mat-icon class="three-icons3">settings</mat-icon>
     </mat-toolbar>
     <mat-sidenav-container>
-        <mat-sidenav #sidenav mode="side" [opened]="true">
+        <mat-sidenav #sidenav mode="side" id="sidenav"  [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen" opened>
             <div class="menu-container">
                 <mat-nav-list>
                     <div mat-button id="sidenav-button">
@@ -55,7 +55,7 @@
                 </mat-nav-list>
             </div>
         </mat-sidenav>
-        <mat-sidenav-content>
+        <mat-sidenav-content [ngStyle]="{'margin-left.px':contentMargin}">
             <router-outlet>
 
             </router-outlet>

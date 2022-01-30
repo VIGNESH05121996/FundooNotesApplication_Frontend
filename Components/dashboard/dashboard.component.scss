@@ -31,7 +31,7 @@ mat-sidenav{
   }
   #sidenav-button:focus {
     background-color: rgba(255, 196, 0, 0.2);
-    margin-top: 3px;
+    margin-top: 2px;
     border-top-right-radius: 30vh;
     border-bottom-right-radius: 30vh;
     width: 240px;
@@ -41,6 +41,8 @@ mat-sidenav{
     border-bottom-right-radius: 30vh;
     width: 240px;
     height: 50px;
+    font-size: 20px;
+    opacity: 0.9;
   }
   mat-nav-list {
     margin-left: -22px;
@@ -51,8 +53,19 @@ mat-sidenav{
     
   }
   #sidenav-icon {
-    margin-right: 40px;
+    margin-right: 30px;
+    margin-left: 8.9px;
     opacity: 0.6;
+    font-size: 30px;
+  }
+  #sidenav.menu-close{
+    width: 70px;
+    height: 100vh;
+    transition: 0.2s;
+  }
+  #sidenav.menu-open{
+    width: 240px;
+    transition: 0.2s;
   }
   mat-sidenav-container{
     height: 88vh;
@@ -65,6 +78,7 @@ mat-sidenav{
   mat-sidenav{
     width: 240px;
     background-color: transparent;
+    border: none;
   }
   .image-container{
     width: 45;

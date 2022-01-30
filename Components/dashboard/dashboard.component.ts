@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  isMenuOpen=true;
+  contentMargin=240;
   constructor(private route:Router) { 
   }
 
@@ -15,6 +17,17 @@ export class DashboardComponent implements OnInit {
   }
   notes(){
     this.route.navigateByUrl('dashboard/notes');
+  }
+
+  onToolbarMenuToggle(){
+    this.isMenuOpen = !this.isMenuOpen;
+    if(!this.isMenuOpen)
+    {
+      this.contentMargin=50;
+    }
+    else{
+      this.contentMargin=400;
+    }
   }
 
 }

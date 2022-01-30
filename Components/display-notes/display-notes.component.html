@@ -1,7 +1,8 @@
 <div class="displayNotes">
-    <div *ngFor="let response of note.notes" class="getAllNotes">
+    <div *ngFor="let response of notesArrayList;" class="getAllNotes">
         <h2 class="heading">{{response.title}}</h2>
-        <p>{{response.message}}</p>
+          <p>{{response.message}}</p>
+          <app-icon></app-icon>
         <app-icons-component></app-icons-component>
     </div>
 </div>

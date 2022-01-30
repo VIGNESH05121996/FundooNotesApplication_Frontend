@@ -7,6 +7,7 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 
+
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},

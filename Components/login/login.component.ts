@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserServiceService } from 'src/app/Services/UserService/user-service.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -23,8 +24,7 @@ export class LoginComponent implements OnInit {
   onSubmitted()
   {
     this.submitted=true;
-    this.route.navigateByUrl('dashboard');
-    if(this.loginForm.value)
+    if(this.loginForm.valid)
     {
       console.log(this.loginForm.value);
       let requestedData={
@@ -33,7 +33,18 @@ export class LoginComponent implements OnInit {
       }
       this.userService.logging(requestedData).subscribe((response:any)=>{
         localStorage.setItem('token',response.jwtToken)
-        console.log(response)})
+        if(response.success == true)
+        {
+          Swal.fire('Logged in successfully')
+          this.route.navigateByUrl('dashboard')
+          console.log(response)
+        }
+    },(error:Response)=>{
+      if(error.status >= 400)
+      {
+        Swal.fire('Login Failed','Email or Password is wrong') 
+      }
+    })
     }
     else
     console.log("invalid");
