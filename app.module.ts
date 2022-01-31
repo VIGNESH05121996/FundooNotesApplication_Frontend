@@ -22,6 +22,8 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { IconsComponentComponent } from './Components/icons-component/icons-component.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SnackBarComponentComponent } from './Components/snack-bar-component/snack-bar-component.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,14 @@ import { DisplayNotesComponent } from './Components/display-notes/display-notes.
     IconsComponentComponent,
     GetAllNotesComponent,
     DisplayNotesComponent,
+    SnackBarComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,
-    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule
+    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
 
-
 @Component({
   selector: 'app-get-all-notes',
   templateUrl: './get-all-notes.component.html',

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserServiceService } from 'src/app/Services/UserService/user-service.service';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
+import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,8 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private userService:UserServiceService,private route:Router) { }
+  constructor(private formBuilder: FormBuilder,private userService:UserServiceService,private route:Router,
+    private notificationServices:NotificationServicesService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -35,14 +36,14 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token',response.jwtToken)
         if(response.success == true)
         {
-          Swal.fire('Logged in successfully')
+          this.notificationServices.showNotification('Login Successful',' ',' ','Success');
           this.route.navigateByUrl('dashboard')
           console.log(response)
         }
     },(error:Response)=>{
-      if(error.status >= 400)
+      if(error.status == 404)
       {
-        Swal.fire('Login Failed','Email or Password is wrong') 
+        this.notificationServices.showNotification('Login Failed',' ','Email or Password wrong','Error');
       }
     })
     }

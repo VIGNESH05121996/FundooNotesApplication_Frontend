@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserServiceService } from 'src/app/Services/UserService/user-service.service';
+import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +11,7 @@ import { UserServiceService } from 'src/app/Services/UserService/user-service.se
 export class RegistrationComponent implements OnInit {
   registerForm:FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private userServices:UserServiceService) { }
+  constructor(private formBuilder: FormBuilder,private userServices:UserServiceService,public notificationServices:NotificationServicesService) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -34,7 +35,12 @@ export class RegistrationComponent implements OnInit {
       password:this.registerForm.value.password,
       confirmPassword:this.registerForm.value.confirmPassword
     }
-    this.userServices.registration(requestData).subscribe((response:any)=>{console.log(response)})
+    this.userServices.registration(requestData).subscribe((response:any)=>{console.log(response)
+    if(response.success == true)
+    {
+      this.notificationServices.showNotification('Registration Successful',' ',' ','Success');
+    }
+    })
   }
   else
   console.log("invalid");
