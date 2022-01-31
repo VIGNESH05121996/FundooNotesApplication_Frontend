@@ -24,6 +24,8 @@ import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.c
 import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { SnackBarComponentComponent } from './Components/snack-bar-component/snack-bar-component.component';
+import { UpdateNoteComponent } from './Components/update-note/update-note.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -38,13 +40,14 @@ import { SnackBarComponentComponent } from './Components/snack-bar-component/sna
     GetAllNotesComponent,
     DisplayNotesComponent,
     SnackBarComponentComponent,
+    UpdateNoteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,
-    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule
+    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule,MatDialogModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

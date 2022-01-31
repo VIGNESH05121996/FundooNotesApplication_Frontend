@@ -1,0 +1,28 @@
+<!-- <form>
+    <input type="text" placeholder="Title" name="title" [(ngModel)]="title">
+    <p>
+        <textarea name="content" placeholder="Take a note" [(ngModel)]="message"></textarea>
+    </p>
+    
+    <div class="border">
+        <app-icons-component></app-icons-component>
+        <button mat-stroked-button class="close" (click)="onSubmitted()">
+            Close
+        </button>
+    </div>
+</form> -->
+<mat-card>
+    <form>
+        <input type="text" placeholder="Title" name="title" [(ngModel)]="title">
+        <p>
+            <textarea name="content" placeholder="Take a note" [(ngModel)]="message"></textarea>
+        </p>
+        
+        <div class="border">
+            <app-icons-component></app-icons-component>
+            <button mat-stroked-button class="close" (click)="onSubmitted()">
+                Close
+            </button>
+        </div>
+    </form>
+  </mat-card>
