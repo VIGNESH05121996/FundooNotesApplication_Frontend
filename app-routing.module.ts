@@ -7,6 +7,7 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
+import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   children:[
     {path:'', redirectTo:"/dashboard/notes", pathMatch:'full' },
     {path:'notes', component:GetAllNotesComponent},
-    {path:'trash',component:TrashNotesComponent}
+    {path:'trash',component:TrashNotesComponent},
+    {path:'archive',component:ArchiveNotesComponent}
   ]}
 ];
 

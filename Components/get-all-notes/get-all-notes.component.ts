@@ -19,10 +19,9 @@ export class GetAllNotesComponent implements OnInit {
   {
     this.notesServices.getAllNotes(this.token).subscribe((response:any)=>{
       this.notesList=response.notes.filter((result:any)=>{
-        console.log(result.trash)
-        this.notesList= result.trash === false
-        return this.notesList
+        return result.trash === false && result.archive === false  
       })
+      console.log("Retrived All Notes:",this.notesList)
       this.notesList.reverse()
     })
   }

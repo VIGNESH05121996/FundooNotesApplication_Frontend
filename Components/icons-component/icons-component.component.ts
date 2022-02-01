@@ -22,7 +22,15 @@ export class IconsComponentComponent implements OnInit {
       trash:true
     }
     this.notesService.trashNotes(data,this.token).subscribe((response:any)=>{
-      console.log(response)
+      this.dataServices.sendData(response)
+    })
+  }
+  archive(){
+    let data={
+      notesId: [this.CardObject.notesId],
+      archive:true
+    }
+    this.notesService.archiveNotes(data,this.token).subscribe((response:any)=>{
       this.dataServices.sendData(response)
     })
   }

@@ -28,6 +28,7 @@ import { UpdateNoteComponent } from './Components/update-note/update-note.compon
 import {MatDialogModule} from '@angular/material/dialog';
 import{ MatMenuModule } from '@angular/material/menu';
 import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
+import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { TrashNotesComponent } from './Components/trash-notes/trash-notes.compon
     DisplayNotesComponent,
     SnackBarComponentComponent,
     UpdateNoteComponent,
-    TrashNotesComponent
+    TrashNotesComponent,
+    ArchiveNotesComponent
   ],
   imports: [
     BrowserModule,
