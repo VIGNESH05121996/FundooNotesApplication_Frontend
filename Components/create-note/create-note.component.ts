@@ -39,6 +39,7 @@ export class CreateNoteComponent implements OnInit {
         message:this.createNoteForm.value.takeNote
       }
       this.notesService.createNotes(requestedData,this.token).subscribe((response:any)=>{console.log(response)
+        this.cardSwap();
         if(response.success == true)
         {
           this.notificationServices.showNotification('Note Added',' ',' ','Success');

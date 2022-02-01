@@ -15,10 +15,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  notes(){
-    this.route.navigateByUrl('dashboard/notes');
-  }
-
+ 
   onToolbarMenuToggle(){
     this.isMenuOpen = !this.isMenuOpen;
     if(!this.isMenuOpen)
@@ -28,6 +25,14 @@ export class DashboardComponent implements OnInit {
     else{
       this.contentMargin=400;
     }
+  }
+  
+  Notes(){
+    this.route.navigateByUrl('dashboard/notes');
+  }
+
+  Trash(){
+    this.route.navigateByUrl('dashboard/trash');
   }
 
 }

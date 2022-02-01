@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
+import { DataServicesService } from 'src/app/Services/NotesServices/DataServices/data-services.service';
 
 @Component({
   selector: 'app-icons-component',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icons-component.component.scss']
 })
 export class IconsComponentComponent implements OnInit {
-
-  constructor() { }
+  @Input() CardObject: any;
+  token:any;
+  constructor(private notesService:NotesServicesService,private dataServices:DataServicesService) { }
 
   ngOnInit(): void {
+    this.token=localStorage.getItem('token')
   }
 
+  trash(){
+    let data={
+      notesId: [this.CardObject.notesId],
+      trash:true
+    }
+    this.notesService.trashNotes(data,this.token).subscribe((response:any)=>{
+      console.log(response)
+      this.dataServices.sendData(response)
+    })
+  }
 }

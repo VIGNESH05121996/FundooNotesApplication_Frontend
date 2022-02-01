@@ -26,6 +26,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { SnackBarComponentComponent } from './Components/snack-bar-component/snack-bar-component.component';
 import { UpdateNoteComponent } from './Components/update-note/update-note.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import{ MatMenuModule } from '@angular/material/menu';
+import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +43,14 @@ import {MatDialogModule} from '@angular/material/dialog';
     DisplayNotesComponent,
     SnackBarComponentComponent,
     UpdateNoteComponent,
+    TrashNotesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,
-    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule,MatDialogModule
+    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule,MatDialogModule,MatMenuModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

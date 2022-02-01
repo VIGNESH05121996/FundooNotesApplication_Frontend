@@ -1,10 +1,10 @@
 <div class="displayNotes">
   <div *ngFor="let response of notesArrayList;" class="getAllNotes">
-    <mat-card-title-group (click)="openDialog(response)">
-      <h2 class="heading">{{response.title}}</h2>
-      <p>{{response.message}}</p>
+    <mat-card-title-group>
+      <h2 class="heading" (click)="openDialog(response)">{{response.title}}</h2>
+      <p (click)="openDialog(response)">{{response.message}}</p>
       <app-icon></app-icon>
-      <app-icons-component></app-icons-component>
+      <app-icons-component [CardObject]="response"></app-icons-component>
     </mat-card-title-group>
   </div>
 </div>

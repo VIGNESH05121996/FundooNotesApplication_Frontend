@@ -18,8 +18,11 @@ export class GetAllNotesComponent implements OnInit {
   getAllNotes()
   {
     this.notesServices.getAllNotes(this.token).subscribe((response:any)=>{
-      console.log(response)
-      this.notesList=response.notes
+      this.notesList=response.notes.filter((result:any)=>{
+        console.log(result.trash)
+        this.notesList= result.trash === false
+        return this.notesList
+      })
       this.notesList.reverse()
     })
   }

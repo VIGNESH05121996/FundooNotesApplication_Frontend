@@ -14,7 +14,12 @@
     <button mat-icon-button>
         <mat-icon>archive</mat-icon>
     </button>
-    <button mat-icon-button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="trash()">
+            <span >Delete note</span>
+        </button>
+    </mat-menu>
 </div>
