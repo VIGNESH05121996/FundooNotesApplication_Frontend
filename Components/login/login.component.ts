@@ -12,6 +12,8 @@ import { NotificationServicesService } from 'src/app/Services/NotificationServic
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
   submitted = false;
+  passwordHide=true;
+  private _mobileQueryListener: () => void;
   constructor(private formBuilder: FormBuilder,private userService:UserServiceService,private route:Router,
     private notificationServices:NotificationServicesService) { }
 
@@ -20,6 +22,7 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
+    
   }
 
   onSubmitted()

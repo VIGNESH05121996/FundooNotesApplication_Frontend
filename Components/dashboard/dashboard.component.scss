@@ -1,3 +1,12 @@
+.dashboard-container{
+   display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 .Search{
     margin-left: 10em;
     margin-top: 1em;
@@ -59,7 +68,7 @@ mat-sidenav{
     font-size: 30px;
   }
   #sidenav.menu-close{
-    width: 70px;
+    width: 50px;
     height: 100vh;
     transition: 0.2s;
   }
@@ -68,7 +77,7 @@ mat-sidenav{
     transition: 0.2s;
   }
   mat-sidenav-container{
-    height: 88vh;
+    height: 100vh;
     background: #fff;
   }
   .menu-button{
@@ -94,4 +103,19 @@ mat-sidenav{
   .three-icons3{
     padding-left: 30px;
     opacity: 0.6;
+  }
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    z-index: 2;
+  }
+  
+  .example-sidenav-container {
+    flex: 2;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    flex: 1 0 auto;
+  }
+  .example-toolbar{
+    background-color: #fff;
   }

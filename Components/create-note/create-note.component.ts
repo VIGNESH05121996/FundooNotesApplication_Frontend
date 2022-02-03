@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
 import { Router } from '@angular/router';
 import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
+import { Observable, interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-create-note',
@@ -14,6 +15,7 @@ export class CreateNoteComponent implements OnInit {
   createNoteForm:FormGroup;
   submitted=false;
   token:any;
+
   constructor(private formBuilder: FormBuilder,private notesService:NotesServicesService,private route:Router,
     public notificationServices:NotificationServicesService) { }
 
@@ -23,6 +25,7 @@ export class CreateNoteComponent implements OnInit {
       takeNote:[null,Validators.required]
     });
     this.token=localStorage.getItem('token');
+    
   }
   cardSwap() {
     console.log(this.card);

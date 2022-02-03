@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +29,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import{ MatMenuModule } from '@angular/material/menu';
 import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
 import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,
-    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule,MatDialogModule,MatMenuModule
+    MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule,MatDialogModule,MatMenuModule,MatCheckboxModule,
+    FlexLayoutModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

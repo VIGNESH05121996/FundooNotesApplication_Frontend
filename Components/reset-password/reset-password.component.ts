@@ -14,6 +14,7 @@ export class ResetPasswordComponent implements OnInit {
   resetPasswordForm:FormGroup;
   submitted = false;
   token:any;
+  passwordHide=true;
   constructor(private formBuilder: FormBuilder,private userService:UserServiceService,private activatedRoute:ActivatedRoute,
     public notificationServices:NotificationServicesService,private route:Router) { }
   

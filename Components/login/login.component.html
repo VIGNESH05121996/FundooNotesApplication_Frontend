@@ -1,17 +1,22 @@
-<div class="login-container">
-  <h1>
-    <span class="c1">F</span>
-    <span class="c2">u</span>
-    <span class="c3">n</span>
-    <span class="c4">d</span>
-    <span class="c5">o</span>
-    <span class="c6">o</span>
-  </h1>
+<div class="login-container" fxLayout="column" fxLayoutAlign="space-around center" fxLayout.xs="column" fxFlex.xs="40">
+  <div class="fundoo">
+    <h1>
+      <span class="c1">F</span>
+      <span class="c2">u</span>
+      <span class="c3">n</span>
+      <span class="c4">d</span>
+      <span class="c5">o</span>
+      <span class="c6">o</span>
+    </h1>
+  </div>
+  <div class="signIn" fxLayoutAlign="space-evenly center" fxLayout.xs="column">
+    <h2>Sign in</h2>
+  </div>
+  <div fxLayout.xs="column" fxFlex.xs="95"></div>
 
-  <h2>Sign in</h2>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmitted()">
-    <div class="input-container">
-      <mat-form-field appearance="outline">
+    <div class="input-container" fxLayout="column" FxLayoutAlign="space-evenly center">
+      <mat-form-field appearance="outline" fxFlex.xs="100">
         <mat-label>Email</mat-label>
         <input matInput placeholder="email" formControlName="email">
       </mat-form-field>
@@ -22,10 +27,16 @@
         </div>
       </div>
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" fxFlex.xs="100">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="password" formControlName="password">
+        <input matInput [type]="passwordHide ? 'password' : 'text'" placeholder="password" formControlName="password">
       </mat-form-field>
+    </div>
+
+    <div class="hidePassword" >
+      <img src="https://cdn3.iconfinder.com/data/icons/show-and-hide-password/100/show_hide_password-08-512.png" 
+           (click)="passwordHide = !passwordHide" id="eye">
+           <p class="showPassword" color="primary">Show Password</p>
     </div>
 
     <div class="text">
@@ -36,13 +47,14 @@
       <button class="button">Learn More</button>
     </div>
 
-    <div routerLink='/registration'>
-      <div class="createAccount"><button class="button">Create Account</button>
+    <div fxLayout="row" fxLayoutAlign="space-between start" fxLayout.xs="row" >
+      <div routerLink='/registration'>
+        <div class="createAccount"><button class="button">Create Account</button>
+        </div>
       </div>
-    </div>
-
-    <div class="next"  >
-      <button mat-raised-button>Next</button>
+      <div class="next" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.xs="row">
+        <button mat-raised-button>Next</button>
+      </div>
     </div>
   </form>
 </div>

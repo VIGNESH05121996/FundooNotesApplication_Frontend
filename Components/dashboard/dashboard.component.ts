@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {ChangeDetectorRef} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +11,13 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   isMenuOpen=true;
   contentMargin=240;
-  constructor(private route:Router) { 
+  mobileQuery: MediaQueryList;
+  private _mobileQueryListener: () => void;
+  
+  constructor(private route:Router,media: MediaMatcher,changeDetectorRef: ChangeDetectorRef) { 
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
   ngOnInit(): void {
@@ -20,10 +28,10 @@ export class DashboardComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
     if(!this.isMenuOpen)
     {
-      this.contentMargin=50;
+      this.contentMargin=30;
     }
     else{
-      this.contentMargin=400;
+      this.contentMargin=300;
     }
   }
   

@@ -1,18 +1,20 @@
-<mat-card *ngIf="!card" class="matcard">
-    <input placeholder="Take a note..." class="input" (click)="cardSwap()" />
-</mat-card>
-<mat-card class="list-view-mat-card" *ngIf="card">
-    <form [formGroup]="createNoteForm">
-        <input type="text" placeholder="Title" name="title" formControlName="title">
-        <p>
-            <textarea name="content" placeholder="Take a note" formControlName="takeNote"></textarea>
-        </p>
-        
-        <div class="border">
-            <app-icons-component></app-icons-component>
-            <button mat-stroked-button class="close" (click)="onSubmitted()">
-                Close
-            </button>
-        </div>
-    </form>
-</mat-card>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <mat-card *ngIf="!card" class="matcard" fxLayout.xs="row" fxFlex.xs="95">
+        <input fxLayout="row" placeholder="Take a note..." class="input" (click)="cardSwap()" />
+    </mat-card>
+    <mat-card class="list-view-mat-card" *ngIf="card" fxLayout.xs="row" fxFlex.xs="95">
+        <form [formGroup]="createNoteForm">
+            <input fxLayout="row" type="text" placeholder="Title" name="title" formControlName="title">
+            <p fxLayout="row">
+                <textarea name="content" placeholder="Take a note" formControlName="takeNote"></textarea>
+            </p>
+
+            <div class="border" fxLayout="row" fxFlex.xs="95">
+                <app-icons-component></app-icons-component>
+                <button mat-stroked-button class="close" (click)="onSubmitted()">
+                    Close
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>

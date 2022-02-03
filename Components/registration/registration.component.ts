@@ -11,6 +11,7 @@ import { NotificationServicesService } from 'src/app/Services/NotificationServic
 export class RegistrationComponent implements OnInit {
   registerForm:FormGroup;
   submitted = false;
+  passwordHide=true;
   constructor(private formBuilder: FormBuilder,private userServices:UserServiceService,public notificationServices:NotificationServicesService) { }
 
   ngOnInit(): void {

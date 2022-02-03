@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
+import { DataServicesService } from 'src/app/Services/NotesServices/DataServices/data-services.service';
 
 @Component({
   selector: 'app-get-all-notes',
@@ -9,11 +10,13 @@ import { NotesServicesService } from 'src/app/Services/NotesServices/notes-servi
 export class GetAllNotesComponent implements OnInit {
   notesList:any;
   token:any;
-  constructor(private notesServices:NotesServicesService) { }
+  constructor(private notesServices:NotesServicesService,private dataServices:DataServicesService) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token');
-    this.getAllNotes();
+    this.dataServices.receivedData.subscribe(()=>{
+      this.getAllNotes()
+    })
   }
   getAllNotes()
   {
