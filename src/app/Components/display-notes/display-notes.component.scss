@@ -1,0 +1,27 @@
+.getAllNotes{
+    width: 90%;
+    height: auto;
+    background-color:#fff;
+    border: 0.5px solid #ffffff;
+    box-shadow: 0 1px 7px rgb(126, 124, 124);
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+.displayNotes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 90px;
+    padding-top: 1%;
+    row-gap: 5px;
+}
+.heading{
+    opacity: 0.8;
+}
+.pushPin{
+    opacity: 0.6;
+    margin-top: -15%;
+   float: right;
+   cursor: pointer;
+}

@@ -1,0 +1,70 @@
+<div class="dashboard-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar fxLayout="row" class="example-toolbar" fxLayout.xs="row">
+        <div fxLayout.xs="column">
+            <button mat-icon-button>
+                <mat-icon (click)="onToolbarMenuToggle()" class="menu-button">menu</mat-icon>
+            </button>
+        </div>
+
+        <div class="image-container">
+            <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png">
+        </div>
+        <span class="fundoo">Fundoo</span>
+        <div class="Search" fxlayout="row" fxLayoutAlign="center" fxLayout.xs="column" fxFlex.xs="95">
+            <mat-form-field appearance="outline" [style.width.px]="600">
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search">
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="95">
+            <mat-icon class="three-icons1">refresh</mat-icon>
+            <mat-icon class="three-icons2">view_stream</mat-icon>
+            <mat-icon class="three-icons3">settings</mat-icon>
+        </div>
+    </mat-toolbar>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #sidenav mode="side" id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen"
+            opened [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <div class="menu-container">
+                <mat-nav-list>
+                    <div mat-button id="sidenav-button" fxLayout="row">
+                        <button mat-button id="sidenav-button" (click)="Notes()">
+                            <mat-icon id="sidenav-icon">lightbulb</mat-icon>
+                            Notes
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button id="sidenav-button" fxLayout="row">
+                            <mat-icon id="sidenav-icon">notifications</mat-icon>
+                            Reminder
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button id="sidenav-button" fxLayout="row">
+                            <mat-icon id="sidenav-icon">edit</mat-icon>
+                            Edit Labels
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button id="sidenav-button" fxLayout="row" (click)="Archive()">
+                            <mat-icon id="sidenav-icon">archive</mat-icon>
+                            Archive
+                        </button>
+                    </div>
+                    <div>
+                        <button mat-button id="sidenav-button" fxLayout="row" (click)="Trash()">
+                            <mat-icon id="sidenav-icon">delete</mat-icon>
+                            Trash
+                        </button>
+                    </div>
+                </mat-nav-list>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content [ngStyle]="{'margin-left.px':contentMargin}">
+            <router-outlet>
+
+            </router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

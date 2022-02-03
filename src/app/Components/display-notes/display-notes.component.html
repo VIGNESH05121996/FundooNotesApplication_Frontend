@@ -1,0 +1,12 @@
+<div class="displayNotes" fxLayout="row wrap" fxLayoutAlign="start center" fxLayout.xs="column">
+  <div *ngFor="let response of notesArrayList;" class="getAllNotes" fxFlex="23%" fxFlex.xs="100%" fxFlex.xs="40%">
+    <mat-card-title-group>
+      <h2 class="heading" (click)="openDialog(response)">{{response.title}}</h2>
+      <div class="pushPin">
+        <mat-icon matTooltip="Pin note">push_pin</mat-icon>
+      </div>
+      <p (click)="openDialog(response)">{{response.message}}</p>
+      <app-icons-component [CardObject]="response"></app-icons-component>
+    </mat-card-title-group>
+  </div>
+</div>

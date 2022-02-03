@@ -1,0 +1,80 @@
+<div class="Registration_container"fxLayout="column" fxLayoutAlign="space-around center" fxLayout.xs="column" fxFlex.xs="20">
+  <div class="fundoo-container">
+    <div class="left_container" >
+      <h1>
+        <span class="c1">F</span>
+        <span class="c2">u</span>
+        <span class="c3">n</span>
+        <span class="c4">d</span>
+        <span class="c5">o</span>
+        <span class="c6">o</span>
+      </h1>
+      <h2>Create Your Fundoo Account</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmitted()">
+        <div class="name-container" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" formControlName="firstName" fxFlex.xs="90">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" formControlName="lastName" fxFlex.xs="90">
+          </mat-form-field>
+        </div>
+
+        <div class="email-container" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+          <mat-form-field class="email_input" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email" fxFlex.xs="90">
+          </mat-form-field>
+
+        </div>
+        <span class="email_p1">
+          <p>You can use letters,numbers & periods</p>
+        </span>
+        <span class="email_p2">
+          <p>Use my current email address instead</p>
+        </span>
+
+        <div class="password-container" fxLayoutGap="10px" fxLayout.lt-sm="column">
+
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="passwordHide ? 'password' : 'text'"  placeholder="Password" formControlName="password" fxFlex.xs="90">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="name_input">
+            <mat-label>Confirm</mat-label>
+            <input matInput [type]="passwordHide ? 'password' : 'text'" placeholder="Confirm" formControlName="confirmPassword" fxFlex.xs="90">
+          </mat-form-field>
+        </div>
+
+        <div class="Checkbox" fxLayout="row" fxLayoutAlign="start" fxFlex.xs="95">
+          <img src="https://cdn3.iconfinder.com/data/icons/show-and-hide-password/100/show_hide_password-08-512.png" 
+               (click)="passwordHide = !passwordHide" id="eye">
+               <span class="showPassword" color="primary">Show Password</span>
+        </div>
+
+        <div class="Login_Left_footer" fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="row">
+          <span class="email_p2">
+            <div routerLink='/login'>
+              <p>Sign in instead</p>
+            </div>
+          </span>
+          <div class="nextButton"> 
+            <button mat-raised-button color="primary">Next</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="right_contianer" fxLayoutAlign="space-evenly center">
+      <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" width="250">
+      <h3>One account. All of Google<br /> working for you.</h3>
+
+    </div>
+
+  </div>
+
+</div>

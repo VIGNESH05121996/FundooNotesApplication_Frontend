@@ -1,0 +1,22 @@
+.border {
+    border: 5px solid transparent;
+    height: 20px;
+    width: 50%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent
+  }
+
+  button{
+    opacity: 0.6;
+    margin-left: 5px;
+}
+.MatMenu{
+  height: 20px;
+  margin-bottom: 90px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
