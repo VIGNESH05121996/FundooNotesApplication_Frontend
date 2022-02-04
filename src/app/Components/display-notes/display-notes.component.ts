@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, OnDestroy } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
@@ -11,7 +11,11 @@ export class DisplayNotesComponent implements OnInit {
   @Input() notesArrayList:any;
   title:any;
   message:any;
-  constructor(public dialog:MatDialog) { }
+  constructor(public dialog:MatDialog) { 
+  }
+
+  ngOnInit() {
+  }
 
   openDialog(noteObjet:any): void {
     const dialogRef = this.dialog.open(UpdateNoteComponent, {
@@ -25,7 +29,5 @@ export class DisplayNotesComponent implements OnInit {
   }
   colorMessageReceived(e:any){
     console.log(e);
-  }
-  ngOnInit(): void {
   }
 }

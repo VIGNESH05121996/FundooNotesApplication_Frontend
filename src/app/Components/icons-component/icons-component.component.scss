@@ -1,15 +1,16 @@
-.border {
-    border: 5px solid transparent;
+.getAllNotesIcon{
+  border: 5px solid transparent;
     height: 20px;
     width: 50%;
     top: 20px;
     display: flex;
     align-items: center;
-    background-color: transparent
-  }
+    background-color: transparent;
+    margin-left: -5%;
+}
 
   button{
-    opacity: 0.6;
+    opacity: 0.8;
     margin-left: 5px;
 }
 .MatMenu{
@@ -36,4 +37,25 @@
   display: grid;
   margin-right: 10px;
   cursor: pointer;
+}
+.trashIcons{
+  border: 5px solid transparent;
+    height: 20px;
+    width: 50%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-left: 20%;
+    justify-content: space-between;
+}
+.ArchiveNotesIcon{
+  border: 5px solid transparent;
+    height: 20px;
+    width: 50%;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-left: -5%;
 }

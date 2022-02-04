@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 import { Router } from '@angular/router';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef} from '@angular/core';
@@ -13,17 +13,18 @@ export class DashboardComponent implements OnInit {
   contentMargin=240;
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
-  
+  dashBoardHitted:boolean=true
+ 
   constructor(private route:Router,media: MediaMatcher,changeDetectorRef: ChangeDetectorRef) { 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit() {
+
   }
- 
+
   onToolbarMenuToggle(){
     this.isMenuOpen = !this.isMenuOpen;
     if(!this.isMenuOpen)

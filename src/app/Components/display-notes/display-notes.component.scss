@@ -1,5 +1,5 @@
 .getAllNotes{
-    width: 90%;
+    width: auto;
     height: auto;
     background-color:#fff;
     border: 0.5px solid #ffffff;
@@ -18,10 +18,25 @@
 }
 .heading{
     opacity: 0.8;
+    padding: 10px;
+}
+.paragraph{
+    padding: 10px;
 }
 .pushPin{
     opacity: 0.6;
-    margin-top: -15%;
+    margin-top: -21%;
    float: right;
    cursor: pointer;
+   padding-right: 15px;
+}
+mat-card-actions
+{
+  visibility: hidden;
+}
+.getAllNotes:hover mat-card-actions{
+  visibility: visible;
+}
+.icons{
+    opacity: 0.8;
 }

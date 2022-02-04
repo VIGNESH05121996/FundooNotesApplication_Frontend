@@ -21,8 +21,8 @@ export class CreateNoteComponent implements OnInit {
 
   ngOnInit(): void {
     this.createNoteForm = this.formBuilder.group({
-      title: [null, Validators.required],
-      takeNote:[null,Validators.required]
+      title: ['', Validators.required],
+      takeNote:['',Validators.required]
     });
     this.token=localStorage.getItem('token');
     

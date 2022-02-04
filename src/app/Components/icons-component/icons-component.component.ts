@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
 import { DataServicesService } from 'src/app/Services/NotesServices/DataServices/data-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-icons-component',
@@ -11,6 +12,7 @@ export class IconsComponentComponent implements OnInit {
   @Input() CardObject: any;
   @Output() changeColorOfNote = new EventEmitter<any>();
   token:any;
+  showIcons:boolean=true;
   colorFirstRow = [
     {
       colorName: 'White', bgColorValue: '#fff'
@@ -45,7 +47,7 @@ export class IconsComponentComponent implements OnInit {
       colorName: 'Gray', bgColorValue: '#E8EAED'
     }
   ];
-  constructor(private notesService:NotesServicesService,private dataServices:DataServicesService) { }
+  constructor(private notesService:NotesServicesService,private dataServices:DataServicesService,private route:Router) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token')
@@ -78,6 +80,15 @@ export class IconsComponentComponent implements OnInit {
       console.log(response)
       this.changeColorOfNote.emit(colorData)
       window.location.reload()
+    })
+  }
+
+  delete(){
+    let data={
+      notesId: [this.CardObject.notesId]
+    }
+    this.notesService.deleteNotes(data,this.token).subscribe((response:any)=>{
+      this.dataServices.sendData(response)
     })
   }
 }

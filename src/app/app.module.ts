@@ -32,7 +32,8 @@ import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AuthenticationGuard } from './Components/authentication.guard';
-import { NgxColorsModule } from 'ngx-colors';
+import { LayoutModule } from '@angular/cdk/layout';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { NgxColorsModule } from 'ngx-colors';
     BrowserAnimationsModule,
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,
     MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule,MatDialogModule,MatMenuModule,MatCheckboxModule,
-    FlexLayoutModule,NgxColorsModule
+    FlexLayoutModule,LayoutModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -19,4 +19,8 @@ private BackendBaseUrl="https://localhost:44365/api";
   {
     return this.httpClient.get(this.BackendBaseUrl+url,token && httpOptions);
   }
+  deleteRequest(url:any,token:boolean=true,httpOptions:any)
+  {
+    return this.httpClient.delete(this.BackendBaseUrl+url,token && httpOptions);
+  }
 }
