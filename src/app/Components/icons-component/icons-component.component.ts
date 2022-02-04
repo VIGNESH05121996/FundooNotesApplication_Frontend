@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
 import { DataServicesService } from 'src/app/Services/NotesServices/DataServices/data-services.service';
 
@@ -9,7 +9,42 @@ import { DataServicesService } from 'src/app/Services/NotesServices/DataServices
 })
 export class IconsComponentComponent implements OnInit {
   @Input() CardObject: any;
+  @Output() changeColorOfNote = new EventEmitter<any>();
   token:any;
+  colorFirstRow = [
+    {
+      colorName: 'White', bgColorValue: '#fff'
+    },
+    {
+      colorName: 'Teal', bgColorValue: '#CDF0EA'
+    },
+    {
+      colorName: 'Lime', bgColorValue: '#B3E283'
+    },
+    {
+      colorName: 'Pink', bgColorValue: '#FFEBCC'
+    },
+    {
+      colorName: 'Yellow', bgColorValue: '#FFFEA9'
+    },
+  ];
+  colorSecondRow = [
+    {
+      colorName: 'Red', bgColorValue: '#F28B82'
+    },
+    {
+      colorName: 'Orange', bgColorValue: '#FBBC05'
+    },
+    {
+      colorName: 'Dark Blue', bgColorValue: '#AECBFA'
+    },
+    {
+      colorName: 'Pink', bgColorValue: '#FDCFE8'
+    },
+    {
+      colorName: 'Gray', bgColorValue: '#E8EAED'
+    }
+  ];
   constructor(private notesService:NotesServicesService,private dataServices:DataServicesService) { }
 
   ngOnInit(): void {
@@ -32,6 +67,17 @@ export class IconsComponentComponent implements OnInit {
     }
     this.notesService.archiveNotes(data,this.token).subscribe((response:any)=>{
       this.dataServices.sendData(response)
+    })
+  }
+  changeColor(colorData:any){
+    let data={
+      notesId: [this.CardObject.notesId],
+      color:colorData
+    }
+    this.notesService.colorNotes(data,this.token).subscribe((response:any)=>{
+      console.log(response)
+      this.changeColorOfNote.emit(colorData)
+      window.location.reload()
     })
   }
 }

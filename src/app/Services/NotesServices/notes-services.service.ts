@@ -63,6 +63,17 @@ export class NotesServicesService {
     }
     return this.httpService.putRequest('/Notes/'+data.notesId+'/Archive',data,true,header);
   }
+  colorNotes(data:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+        
+      })
+    }
+    return this.httpService.putRequest('/Notes/'+data.notesId+'/Color',data,true,header);
+  }
 }
 
 

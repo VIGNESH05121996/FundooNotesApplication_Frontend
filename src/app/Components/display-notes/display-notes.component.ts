@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
@@ -22,6 +22,9 @@ export class DisplayNotesComponent implements OnInit {
       this.title = result;
       this.message = result;
     });
+  }
+  colorMessageReceived(e:any){
+    console.log(e);
   }
   ngOnInit(): void {
   }

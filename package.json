@@ -22,6 +22,8 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@material/form-field": "^13.0.0",
+    "ngx-color-picker": "^11.0.0",
+    "ngx-colors": "^3.0.0",
     "rxjs": "~7.4.0",
     "sweetalert2": "^11.3.10",
     "tslib": "^2.3.0",

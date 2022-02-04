@@ -5,7 +5,7 @@
     <button mat-icon-button>
         <mat-icon>person_add</mat-icon>
     </button>
-    <button mat-icon-button>
+    <button mat-icon-button [matMenuTriggerFor]="colorMenu">
         <mat-icon>palette</mat-icon>
     </button>
     <button mat-icon-button>
@@ -21,5 +21,19 @@
         <button mat-menu-item class="MatMenu" (click)="trash()">
             <span >Delete note</span>
         </button>
+    </mat-menu>
+    <mat-menu #colorMenu="matMenu">
+        <div class="card">
+            <div *ngFor="let noteColor of colorFirstRow" class="Color">
+                <button mat-mini-fab [style.background]="noteColor?.bgColorValue"
+                    (click)="changeColor(noteColor?.bgColorValue)"></button>
+            </div>
+        </div>
+        <div class="card">
+            <div *ngFor="let noteColor of colorSecondRow" class="Color">
+                <button mat-mini-fab [style.background]="noteColor?.bgColorValue"
+                    (click)="changeColor(noteColor?.bgColorValue)"></button>
+            </div>
+        </div>
     </mat-menu>
 </div>
