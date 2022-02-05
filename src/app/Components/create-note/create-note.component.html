@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="center center">
+<div fxLayout="column" fxLayoutAlign="center center"  >
     <mat-card *ngIf="!card" class="matcard" fxLayout.xs="row" fxFlex.xs="95">
         <input fxLayout="row" placeholder="Take a note..." class="input" (click)="cardSwap()" />
         <mat-icon matTooltip="New list" class="three-buttons">check_box</mat-icon>
@@ -12,7 +12,7 @@
                 <textarea name="content" placeholder="Take a note" formControlName="takeNote"></textarea>
             </p>
 
-            <div class="border" fxLayout="row" fxFlex.xs="95">
+            <div class="iconButtons">
                 <app-icons-component [CardObject]="{trash:false,archive:false}"></app-icons-component>
                 <button mat-stroked-button class="close" (click)="onSubmitted()">
                     Close

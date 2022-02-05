@@ -1,7 +1,8 @@
-import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input  } from '@angular/core';
 import { Router } from '@angular/router';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef} from '@angular/core';
+import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,9 +14,10 @@ export class DashboardComponent implements OnInit {
   contentMargin=240;
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
-  dashBoardHitted:boolean=true
+  dashBoardHitted:boolean=true;
  
-  constructor(private route:Router,media: MediaMatcher,changeDetectorRef: ChangeDetectorRef) { 
+  constructor(private route:Router,media: MediaMatcher,changeDetectorRef: ChangeDetectorRef,
+       public notificationServices:NotificationServicesService) { 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -45,5 +47,11 @@ export class DashboardComponent implements OnInit {
   }
   Archive(){
     this.route.navigateByUrl('dashboard/archive')
+  }
+  Logout()
+  {
+    localStorage.removeItem('token');
+    this.route.navigateByUrl('login')
+    this.notificationServices.showNotification('Logged out Successfully',' ','','Success');
   }
 }

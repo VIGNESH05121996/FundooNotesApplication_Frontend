@@ -33,7 +33,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AuthenticationGuard } from './Components/authentication.guard';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     SnackBarComponentComponent,
     UpdateNoteComponent,
     TrashNotesComponent,
-    ArchiveNotesComponent
+    ArchiveNotesComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +58,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     BrowserAnimationsModule,
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,
     MatIconModule,MatSidenavModule,MatListModule,MatButtonModule,MatSnackBarModule,MatDialogModule,MatMenuModule,MatCheckboxModule,
-    FlexLayoutModule,LayoutModule
+    FlexLayoutModule,LayoutModule,MatTooltipModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

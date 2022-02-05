@@ -2,7 +2,7 @@
     <mat-toolbar fxLayout="row" class="example-toolbar" fxLayout.xs="row">
         <div fxLayout.xs="column">
             <button mat-icon-button>
-                <mat-icon (click)="onToolbarMenuToggle()" class="menu-button">menu</mat-icon>
+                <mat-icon matTooltip="Menu" (click)="onToolbarMenuToggle()" class="menu-button">menu</mat-icon>
             </button>
         </div>
 
@@ -16,10 +16,16 @@
                 <input matInput placeholder="Search">
             </mat-form-field>
         </div>
+
         <div fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="95">
             <mat-icon class="three-icons1">refresh</mat-icon>
             <mat-icon class="three-icons2">view_stream</mat-icon>
-            <mat-icon class="three-icons3">settings</mat-icon>
+            <mat-icon matTooltip="Settings" class="three-icons3">settings</mat-icon>
+            <div matTooltip="Logout" class="three-icons4">
+                <button mat-icon-button (click)="Logout()" class="logoutButton">
+                    <mat-icon >logout</mat-icon>
+                </button>
+            </div>
         </div>
     </mat-toolbar>
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">

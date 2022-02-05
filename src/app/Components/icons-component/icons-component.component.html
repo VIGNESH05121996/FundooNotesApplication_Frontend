@@ -1,29 +1,29 @@
 <div class="border" >
     <div class="getAllNotesIcon" *ngIf="showIcons && this.CardObject.trash === false" >
         <button mat-icon-button>
-            <mat-icon>add_alert</mat-icon>
+            <mat-icon matTooltip="Reminder">add_alert</mat-icon>
         </button>
         <button mat-icon-button>
-            <mat-icon>person_add</mat-icon>
+            <mat-icon matTooltip="Collaborate">person_add</mat-icon>
         </button>
         <button mat-icon-button [matMenuTriggerFor]="colorMenu">
-            <mat-icon>palette</mat-icon>
+            <mat-icon matTooltip="Color">palette</mat-icon>
         </button>
         <button mat-icon-button>
-            <mat-icon>image</mat-icon>
+            <mat-icon matTooltip="Image">image</mat-icon>
         </button>
         <div *ngIf="showIcons && this.CardObject.archive === false">
             <button mat-icon-button (click)="archive()">
-                <mat-icon>archive</mat-icon>
+                <mat-icon matTooltip="Archive">archive</mat-icon>
             </button>
         </div>
         <div *ngIf="!showIcons || this.CardObject.archive === true">
             <button mat-icon-button (click)="archive()">
-                <mat-icon>unarchive</mat-icon>
+                <mat-icon matTooltip="Unarchive">unarchive</mat-icon>
             </button>
         </div>
         <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
+            <mat-icon matTooltip="More">more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
             <button mat-menu-item class="MatMenu" (click)="trash()">
@@ -47,10 +47,10 @@
     </div>
 
     <div class="trashIcons" *ngIf="!showIcons || this.CardObject.trash === true">
-        <button mat-icon-button (click)="delete()">
+        <button mat-icon-button matTooltip="Permanently Delete" (click)="delete()">
             <mat-icon>delete</mat-icon>
         </button>
-        <button mat-icon-button (click)="trash()">
+        <button mat-icon-button matTooltip="Restore Note" (click)="trash()">
             <mat-icon>restore_from_trash</mat-icon>
         </button>
     </div>

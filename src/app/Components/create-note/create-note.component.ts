@@ -32,6 +32,7 @@ export class CreateNoteComponent implements OnInit {
     console.log(this.card);
     return this.card === true ? (this.card = false) : (this.card = true);
   }
+
   onSubmitted()
   {
     this.submitted=true;

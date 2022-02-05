@@ -56,8 +56,9 @@ button{
 
 .close{
   margin: 100px;
+  margin-left: 180px;
 }
-.border {
+.iconButtons {
   border: 5px solid transparent;
   height: 20px;
   width: 50%;
@@ -67,6 +68,7 @@ button{
   justify-content: space-between;
   background-color: transparent;
   padding-bottom: 2%;
+  opacity: 0.7;
 }
 .three-buttons{
 padding-left: 20px; 

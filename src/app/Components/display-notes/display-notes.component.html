@@ -1,5 +1,5 @@
-<div class="displayNotes" fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayout.xs="column">
-  <div class="getAllNotes" *ngFor="let response of notesArrayList;" fxFlex="23%" fxFlex.xs="100%" fxFlex.xs="40%" [style.background]="response.color">
+<div class="displayNotes" fxLayout="row wrap" fxLayoutAlign="flex-start">
+  <div class="getAllNotes" *ngFor="let response of notesArrayList" fxFlex.sm="100%" [style.background]="response.color">
     <mat-card>
       <mat-card-title-group>
         <h2 class="heading" (click)="openDialog(response)">{{response.title}}</h2>

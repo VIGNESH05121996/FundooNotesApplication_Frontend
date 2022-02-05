@@ -93,16 +93,22 @@ mat-sidenav{
     width: 45;
   }
   .three-icons1{
-    padding-left: 200px;
+    padding-left: 230px;
     opacity: 0.6;
   }
   .three-icons2{
-    padding-left: 30px;
+    padding-left: 50px;
     opacity: 0.6;
   }
   .three-icons3{
-    padding-left: 30px;
+    padding-left: 50px;
     opacity: 0.6;
+    cursor: pointer;
+  }
+  .three-icons4{
+    padding-left: 50px;
+    opacity: 0.6;
+    cursor: pointer;
   }
   .example-is-mobile .example-toolbar {
     position: fixed;
@@ -118,4 +124,7 @@ mat-sidenav{
   }
   .example-toolbar{
     background-color: #fff;
+  }
+  .logoutButton{
+    border: none;
   }

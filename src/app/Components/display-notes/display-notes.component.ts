@@ -9,6 +9,7 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
 })
 export class DisplayNotesComponent implements OnInit {
   @Input() notesArrayList:any;
+  filterString:string;
   title:any;
   message:any;
   constructor(public dialog:MatDialog) { 

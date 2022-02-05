@@ -1,5 +1,5 @@
 .getAllNotes{
-    width: auto;
+    width: 23%;
     height: 45%;
     background-color:#fff;
     border: 0.5px solid #ffffff;
@@ -12,6 +12,7 @@
 .displayNotes{
     display: grid;
     grid-row-gap: 16px;
+    padding-top: 20px;
 }
 .heading{
     opacity: 0.8;
