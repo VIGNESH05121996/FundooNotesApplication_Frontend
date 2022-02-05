@@ -27,7 +27,7 @@ export class DisplayNotesComponent implements OnInit {
       this.message = result;
     });
   }
-  colorMessageReceived(e:any){
+  colorMessageReceived(e:any){ 
     console.log(e);
   }
 }

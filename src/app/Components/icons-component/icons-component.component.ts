@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./icons-component.component.scss']
 })
 export class IconsComponentComponent implements OnInit {
-  @Input() CardObject: any;
   @Output() changeColorOfNote = new EventEmitter<any>();
+  @Input() CardObject: any;
   token:any;
   showIcons:boolean=true;
   colorFirstRow = [
@@ -88,6 +88,7 @@ export class IconsComponentComponent implements OnInit {
       notesId: [this.CardObject.notesId]
     }
     this.notesService.deleteNotes(data,this.token).subscribe((response:any)=>{
+      console.log(response)
       this.dataServices.sendData(response)
     })
   }

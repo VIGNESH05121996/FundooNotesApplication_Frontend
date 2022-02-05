@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
 import { Router } from '@angular/router';
@@ -11,6 +11,7 @@ import { NotificationServicesService } from 'src/app/Services/NotificationServic
 })
 export class CreateNoteComponent implements OnInit {
   @Output() autoRefreshEvent = new EventEmitter<string>();
+  @Input() CardObject: any;
   card: boolean = false;
   createNoteForm:FormGroup;
   submitted=false;

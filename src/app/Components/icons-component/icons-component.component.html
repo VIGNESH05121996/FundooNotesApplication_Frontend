@@ -12,12 +12,12 @@
         <button mat-icon-button>
             <mat-icon>image</mat-icon>
         </button>
-        <div *ngIf="this.CardObject.archive === false">
+        <div *ngIf="showIcons && this.CardObject.archive === false">
             <button mat-icon-button (click)="archive()">
                 <mat-icon>archive</mat-icon>
             </button>
         </div>
-        <div *ngIf="this.CardObject.archive === true">
+        <div *ngIf="!showIcons || this.CardObject.archive === true">
             <button mat-icon-button (click)="archive()">
                 <mat-icon>unarchive</mat-icon>
             </button>
