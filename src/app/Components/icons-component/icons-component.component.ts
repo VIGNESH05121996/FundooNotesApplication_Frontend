@@ -60,7 +60,6 @@ export class IconsComponentComponent implements OnInit {
     }
     this.notesService.trashNotes(data,this.token).subscribe((response:any)=>{
       this.dataServices.sendData(response)
-      
     })
   }
   archive(){

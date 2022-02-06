@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   contentMargin=240;
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
+  filterString:any;
   dashBoardHitted:boolean=true;
  
   constructor(private route:Router,media: MediaMatcher,changeDetectorRef: ChangeDetectorRef,
@@ -31,7 +32,7 @@ export class DashboardComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
     if(!this.isMenuOpen)
     {
-      this.contentMargin=30;
+      this.contentMargin=100;
     }
     else{
       this.contentMargin=200;

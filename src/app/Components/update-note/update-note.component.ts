@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NotesServicesService } from 'src/app/Services/NotesServices/notes-services.service';
 import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
@@ -9,6 +9,7 @@ import { NotificationServicesService } from 'src/app/Services/NotificationServic
   styleUrls: ['./update-note.component.scss']
 })
 export class UpdateNoteComponent implements OnInit {
+  @Input() CardObject: any;
   title:any;
   message:any;
   token:any;
